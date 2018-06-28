@@ -1,5 +1,32 @@
 import wx
+from bnyCompliance.bestex.mtg.manager import DataMgr
+from bnyCompliance.bestex.treasury.treasMgr import treasMgr 
+#from mtgMgr import dataMgr
+#from treasMgr import treasMgr
+#from bloombergBooks import books as books
+#from washSales import washMgr
 
+import datetime
+from pandas.tseries.offsets import BDay
+import os
+
+bday = datetime.date.today() - BDay(1)
+MONTH = bday.strftime('%B') 
+YEAR = bday.strftime('%Y')
+
+
+BLOOMBERG_REPORT_PATH = {
+                        'main' : 'H:\\Post June 11, 2010\\Calendars\\CM Fixed Income Reviews\\',
+                        'mtgBloomberg' : 'Best Ex Mortgage\\BloombergFiles\\',
+                        'treasuryBloomberg' : 'Best Ex Treasuries\\BloombergFiles\\',
+                        }
+                        
+                        
+MTG_BLOOMBERG = os.path.join(BLOOMBERG_REPORT_PATH['main'],BLOOMBERG_REPORT_PATH['mtgBloomberg'])
+MTG_YESTERDAY = sorted(os.listdir(MTG_BLOOMBERG))[-1]
+
+TREAS_BLOOMBERG = os.path.join(BLOOMBERG_REPORT_PATH['main'],BLOOMBERG_REPORT_PATH['treasuryBloomberg'])
+TREAS_YESTERDAY = sorted(os.listdir(TREAS_BLOOMBERG))[-1]
 
 class TabOneManual(wx.Panel):
     def __init__(self, parent):
@@ -21,13 +48,13 @@ class TabOneManual(wx.Panel):
         fileLocText = wx.StaticText(self, label="File Location")
         self.tc2 = wx.TextCtrl(self, value='H:\\Post June 11, 2010\\Calendars\\CM Fixed Income Reviews\\Best Ex Mortgage\\BloombergFiles')
         inputButton = wx.Button(self, label="Browse...")
-        #inputButton.Bind(wx.EVT_BUTTON, self.onDir)
+        inputButton.Bind(wx.EVT_BUTTON, self.onDir)
         #---------------------File Output-------------------------------
         SaveLocText = wx.StaticText(self, label="Save Location")
         self.tc3 = wx.TextCtrl(self, value='H:\\Post June 11, 2010\\Calendars\\CM Fixed Income Reviews')
 
         outputButton = wx.Button(self, label="Browse...")
-        #outputButton.Bind(wx.EVT_BUTTON, self.onDirSave)
+        outputButton.Bind(wx.EVT_BUTTON, self.onDirSave)
         
         #--------------------Radio Buttons x3----------------------------
         
@@ -61,6 +88,84 @@ class TabOneManual(wx.Panel):
         self.SetSizer(sizer)
 
         
+    def onDir(self, event):
+        """
+        Show the DirDialog and print the user's choice to stdout
+        """
+        dlg = wx.DirDialog(self, "Choose a directory:",
+                           defaultPath="H:\\Post June 11, 2010\\Calendars\\CM Fixed Income Reviews",
+                           style=wx.DD_DEFAULT_STYLE
+                           #| wx.DD_DIR_MUST_EXIST
+                           #| wx.DD_CHANGE_DIR
+                           )
+        if dlg.ShowModal() == wx.ID_OK:
+            path = dlg.GetPath()
+            self.tc2.SetValue(path)
+        
+        
+    def onDirSave(self, event):
+        """
+        Show the DirDialog and print the user's choice to stdout
+        """
+        dlg = wx.DirDialog(self, "Choose a directory:",
+                           defaultPath="H:\\Post June 11, 2010\\Calendars\\CM Fixed Income Reviews",
+                           style=wx.DD_DEFAULT_STYLE
+                           #| wx.DD_DIR_MUST_EXIST
+                           #| wx.DD_CHANGE_DIR
+                           )
+        if dlg.ShowModal() == wx.ID_OK:
+            path = dlg.GetPath()
+            self.tc3.SetValue(path)
+
+
+    def onOk(self, event):
+        
+        if self.radio1.GetValue() == True:
+            
+            dlg = wx.MessageDialog(self, "Run Mortage Best Ex Rept?",
+                           style=wx.DD_DEFAULT_STYLE)
+            if dlg.ShowModal() == wx.ID_OK:
+
+        
+                date = self.tc1.GetValue()
+                bloomy = self.tc2.GetValue() + '\\'   
+                save = self.tc3.GetValue()+ "\\"
+        
+                mtgMgr = DataMgr(date, bloomy, save)
+                mtgMgr.save()
+            
+        elif self.radio2.GetValue() == True:
+            dlg = wx.MessageDialog(self, "Run Treasury Best Ex Rept",
+                           style=wx.DD_DEFAULT_STYLE)
+            
+            if dlg.ShowModal() == wx.ID_OK:
+                date = self.tc1.GetValue()
+                bloomy = self.tc2.GetValue()+"\\"
+                save = self.tc3.GetValue()+"\\"
+                
+                treasMgr1 = treasMgr(date, bloomy, save)
+                treasMgr1.save()
+                
+        elif self.radio3.GetValue() == True:
+            dlg = wx.MessageDialog(self, "Run Wash Report?",
+                           style=wx.DD_DEFAULT_STYLE)
+            
+            if dlg.ShowModal() == wx.ID_OK:
+                date = self.tc1.GetValue()
+                bloomy = self.tc2.GetValue()+"\\"
+                save = self.tc3.GetValue()+"\\"
+                
+                wash = washMgr(bloomy, save, date)
+                wash.save()
+        
+        else:
+            dlg = wx.MessageDialog(self, "Chose a report type",
+                               style = wx.DD_DEFAULT_STYLE)
+                
+
+
+
+        
 class TabOneAutoRun(wx.Panel):
 #------------------------------auto run----------------------------------
     def __init__(self, parent):
@@ -68,7 +173,7 @@ class TabOneAutoRun(wx.Panel):
         #self.SetBackGroundColour("pink")
         blankPanel = wx.Panel(self)
         runMtg = wx.Button(self, label="Run Mortgage Best Ex Previous Business Day")
-        #runMtg.Bind(wx.EVT_BUTTON, self.runPreviousBdayMtg)
+        runMtg.Bind(wx.EVT_BUTTON, self.runPreviousBdayMtg)
         
         runTreas = wx.Button(self, label="Run Treasury Best Ex Previous Business Day")
         #line = wx.StaticLine(self.panel, -1, style=wx.LI_HORIZONTAL)
@@ -78,19 +183,48 @@ class TabOneAutoRun(wx.Panel):
         sizer.Add(runTreas, pos=(0,10))
 
         self.SetSizer(sizer)
-        #runTreas.Bind(wx.EVT_BUTTON, self.runPreviousBdayTreas)
+        runTreas.Bind(wx.EVT_BUTTON, self.runPreviousBdayTreas)
+        
+    def runPreviousBdayMtg(self, event):
+            
+        dlg = wx.MessageDialog(self, "Run Mortage Best Ex Report for previous business day?",
+                       style=wx.DD_DEFAULT_STYLE
+                       #| wx.DD_DIR_MUST_EXIST
+                       #| wx.DD_CHANGE_DIR
+                       )
+        
+        if dlg.ShowModal() == wx.ID_OK:
 
-"""
-class TabOneMain(wx.Panel):
-    def __init__(self):
-        wx.Panel.__init__(self)
         
-        topPanel = TabOneManual
-        bottomPanel = TabOneAutoRun
+                date = MTG_YESTERDAY.replace('.csv','')
+                year = YEAR
+                month = MONTH
+                bloomy = MTG_BLOOMBERG
+                save = os.path.join(BLOOMBERG_REPORT_PATH['main'],'Best Ex Mortgage', YEAR, month+"\\")
+                mtg = DataMgr(date,bloomy, save)
+                mtg.save()
+                
+    def runPreviousBdayTreas(self, event):
+            
+        dlg = wx.MessageDialog(self, "Run Treasury Best Ex Report for previous business day?",
+                       style=wx.DD_DEFAULT_STYLE
+                       #| wx.DD_DIR_MUST_EXIST
+                       #| wx.DD_CHANGE_DIR
+                       )
         
-        self.Show()
+        if dlg.ShowModal() == wx.ID_OK:
+
         
-"""
+                date = TREAS_YESTERDAY.replace('.csv','')
+                year = YEAR
+                month = MONTH
+                bloomy = TREAS_BLOOMBERG
+                save = os.path.join(BLOOMBERG_REPORT_PATH['main'],'Best Ex Treasuries', YEAR, month+"\\")
+                treas = treasMgr(date,bloomy, save)
+                treas.save()
+
+
+
 class FixedIncomeTabMain(wx.Panel):
     """"""
 
