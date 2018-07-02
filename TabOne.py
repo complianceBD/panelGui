@@ -3,10 +3,10 @@ from bnyCompliance.bestex.mtg.manager import DataMgr
 from bnyCompliance.bestex.treasury.treasMgr import treasMgr 
 from bnyCompliance.FixedIncomeWash.wash import washMgr
 from bnyCompliance.bloombergBooks.books import books
-#from mtgMgr import dataMgr
-#from treasMgr import treasMgr
-#from bloombergBooks import books as books
-#from washSales import washMgr
+#from bnyCompliance.ReportOpener.excelcomm import openWorkBook
+import win32com.client as win32
+from bnyCompliance.ReportOpener.excelcomm import openWorkbook
+
 
 import datetime
 from pandas.tseries.offsets import BDay
@@ -166,8 +166,82 @@ class TabOneManual(wx.Panel):
                 
 
 
+class TabOneExcelOpen(wx.Panel):
+    def __init__(self, parent):
+        wx.Panel.__init__(self, parent, style=wx.SUNKEN_BORDER)
 
         
+        
+        #---------------------------------------------------------
+        instructionText =  wx.StaticText(self, label="OPEN REPORTS IN EXCEL")
+        font = wx.Font(12, wx.DEFAULT, wx.NORMAL, wx.BOLD)
+        instructionText.SetFont(font)
+        #--------------------MTG Best Ex Open Button---------------------------
+     
+        #File Lcoation 
+        MortgageBestExText = wx.StaticText(self, label="Open Mortgage Best Ex in Excel (must run the report first): ")
+        MtgBestExButton = wx.Button(self, label="Open Mortgage Best Ex in Excel")
+        self.location = "H://Post June 11, 2010//Calendars//CM Fixed Income Reviews//Best Ex Mortgage//2018//June//2018-06-29.xlsx"
+        MtgBestExButton.Bind(wx.EVT_BUTTON, self.OpenFile)
+        
+        #-------------------Treasury Best Ex Open Button-------------------------
+        
+        TreasuryBestExText = wx.StaticText(self, label="Open Treasury Best Ex in Excel (must run the report first): ")
+        #self.TreasuryFile = 'H:\\Post June 11, 2010\\Calendars\\CM Fixed Income Reviews\\Best Ex Mortgage\\"
+        self.TreasuryBestExButton = wx.Button(self, label="Open Treasury Best Ex in Excel")
+        #inputButton.Bind(wx.EVT_BUTTON, self.onDir)
+        
+        #-------------------Wash Open Button-------------------------
+        
+        WashButtonText = wx.StaticText(self, label="Open Wash Report in Excel (must run the report first): ")
+        #self.WashFile = 'H:\\Post June 11, 2010\\Calendars\\CM Fixed Income Reviews\\Best Ex Mortgage\\'
+        self.WashButton = wx.Button(self, label="Open Wash Report in Excel")
+        #inputButton.Bind(wx.EVT_BUTTON, self.onDir)
+       
+        
+        sizer = wx.GridBagSizer(7, 5)
+        sizer.Add(instructionText, pos=(0,0), flag=wx.LEFT)
+        
+        sizer.Add(MortgageBestExText, pos=(2, 0), flag=wx.LEFT, border=10) #Date static text nested on left
+        sizer.Add(MtgBestExButton, pos=(2, 1), span=(1, 3), flag=wx.TOP|wx.EXPAND)#mtgBestEx Button
+        
+        sizer.Add(TreasuryBestExText, pos=(3, 0), flag=wx.LEFT|wx.TOP, border=10)#file input sizer static text
+        sizer.Add(self.TreasuryBestExButton, pos=(3, 1), span=(1, 3), flag=wx.TOP|wx.EXPAND, border=5)#Treasury best ex button
+
+        sizer.Add(WashButtonText, pos=(4, 0), flag=wx.TOP|wx.LEFT, border=10)
+        sizer.Add(self.WashButton, pos=(4, 1), span=(1,3), flag=wx.TOP|wx.EXPAND, border=5)#brow button save
+
+        self.SetSizer(sizer)
+        
+        
+    def OpenFile(self, event):
+    
+        
+        dlg = wx.MessageDialog(self, "Open Report",
+                       style=wx.DD_DEFAULT_STYLE)
+            
+            
+        if dlg.ShowModal() == wx.ID_OK:
+            try:
+                PATH_TO_DIR = os.path.join(BLOOMBERG_REPORT_PATH['main'],'Best Ex Mortgage', YEAR, MONTH, MTG_YESTERDAY.replace(".csv", ".xlsx"))
+                print(PATH_TO_DIR)
+                excel = excel = win32.gencache.EnsureDispatch('Excel.Application')
+                #openWorkbook(excel, "H:\\Post June 11, 2010\\Calendars\\CM Fixed Income Reviews\\Best Ex Mortgage\\2018"+"\\June\\"+"2018-06-29.xlsx")
+                wb =  openWorkbook(excel, PATH_TO_DIR)
+                ws = wb.Worksheets('Sheet1') 
+                excel.Visible = True
+
+            except Exception as e:
+                print(e)
+
+            finally:
+                # RELEASES RESOURCES
+                ws = None
+                wb = None
+                excel = None
+
+
+
 class TabOneAutoRun(wx.Panel):
 #------------------------------auto run----------------------------------
     def __init__(self, parent):
@@ -236,10 +310,12 @@ class FixedIncomeTabMain(wx.Panel):
         wx.Panel.__init__(self, parent, style=wx.SUNKEN_BORDER)
         panel = TabOneAutoRun(self)
         panel2 = TabOneManual(self)
+        panel3 = TabOneExcelOpen(self)
         
         sizer = wx.GridBagSizer(10,5)
         sizer.Add(panel, pos=(2,1))
         sizer.Add(panel2, pos=(4,1))
+        sizer.Add(panel3, pos=(6,1))
         self.SetSizer(sizer)
         #self.Show()
 """
