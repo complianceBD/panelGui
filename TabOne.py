@@ -30,6 +30,10 @@ MTG_YESTERDAY = sorted(os.listdir(MTG_BLOOMBERG))[-1]
 TREAS_BLOOMBERG = os.path.join(BLOOMBERG_REPORT_PATH['main'],BLOOMBERG_REPORT_PATH['treasuryBloomberg'])
 TREAS_YESTERDAY = sorted(os.listdir(TREAS_BLOOMBERG))[-1]
 
+WASH_DIR = os.path.join(BLOOMBERG_REPORT_PATH['main'],'wash')
+WASH_LATEST = sorted(os.listdir(WASH_DIR))[-1]
+
+
 class TabOneManual(wx.Panel):
     def __init__(self, parent):
         wx.Panel.__init__(self, parent, style=wx.SUNKEN_BORDER)
@@ -181,22 +185,19 @@ class TabOneExcelOpen(wx.Panel):
         #File Lcoation 
         MortgageBestExText = wx.StaticText(self, label="Open Mortgage Best Ex in Excel (must run the report first): ")
         MtgBestExButton = wx.Button(self, label="Open Mortgage Best Ex in Excel")
-        self.location = "H://Post June 11, 2010//Calendars//CM Fixed Income Reviews//Best Ex Mortgage//2018//June//2018-06-29.xlsx"
-        MtgBestExButton.Bind(wx.EVT_BUTTON, self.OpenFile)
+        MtgBestExButton.Bind(wx.EVT_BUTTON, self.OpenFileMTG)
         
         #-------------------Treasury Best Ex Open Button-------------------------
         
         TreasuryBestExText = wx.StaticText(self, label="Open Treasury Best Ex in Excel (must run the report first): ")
-        #self.TreasuryFile = 'H:\\Post June 11, 2010\\Calendars\\CM Fixed Income Reviews\\Best Ex Mortgage\\"
-        self.TreasuryBestExButton = wx.Button(self, label="Open Treasury Best Ex in Excel")
-        #inputButton.Bind(wx.EVT_BUTTON, self.onDir)
+        TreasuryBestExButton = wx.Button(self, label="Open Treasury Best Ex in Excel")
+        TreasuryBestExButton.Bind(wx.EVT_BUTTON, self.OpenFileTSY)
         
         #-------------------Wash Open Button-------------------------
         
         WashButtonText = wx.StaticText(self, label="Open Wash Report in Excel (must run the report first): ")
-        #self.WashFile = 'H:\\Post June 11, 2010\\Calendars\\CM Fixed Income Reviews\\Best Ex Mortgage\\'
-        self.WashButton = wx.Button(self, label="Open Wash Report in Excel")
-        #inputButton.Bind(wx.EVT_BUTTON, self.onDir)
+        WashButton = wx.Button(self, label="Open Wash Report in Excel")
+        WashButton.Bind(wx.EVT_BUTTON, self.OpenFileWASH)
        
         
         sizer = wx.GridBagSizer(7, 5)
@@ -206,15 +207,15 @@ class TabOneExcelOpen(wx.Panel):
         sizer.Add(MtgBestExButton, pos=(2, 1), span=(1, 3), flag=wx.TOP|wx.EXPAND)#mtgBestEx Button
         
         sizer.Add(TreasuryBestExText, pos=(3, 0), flag=wx.LEFT|wx.TOP, border=10)#file input sizer static text
-        sizer.Add(self.TreasuryBestExButton, pos=(3, 1), span=(1, 3), flag=wx.TOP|wx.EXPAND, border=5)#Treasury best ex button
+        sizer.Add(TreasuryBestExButton, pos=(3, 1), span=(1, 3), flag=wx.TOP|wx.EXPAND, border=5)#Treasury best ex button
 
         sizer.Add(WashButtonText, pos=(4, 0), flag=wx.TOP|wx.LEFT, border=10)
-        sizer.Add(self.WashButton, pos=(4, 1), span=(1,3), flag=wx.TOP|wx.EXPAND, border=5)#brow button save
+        sizer.Add(WashButton, pos=(4, 1), span=(1,3), flag=wx.TOP|wx.EXPAND, border=5)#brow button save
 
         self.SetSizer(sizer)
         
         
-    def OpenFile(self, event):
+    def OpenFileMTG(self, event):
     
         
         dlg = wx.MessageDialog(self, "Open Report",
@@ -239,6 +240,58 @@ class TabOneExcelOpen(wx.Panel):
                 ws = None
                 wb = None
                 excel = None
+
+    def OpenFileTSY(self, event):
+    
+        
+        dlg = wx.MessageDialog(self, "Open Report",
+                       style=wx.DD_DEFAULT_STYLE)
+            
+            
+        if dlg.ShowModal() == wx.ID_OK:
+            try:
+                PATH_TO_DIR = os.path.join(BLOOMBERG_REPORT_PATH['main'],'Best Ex Treasuries', YEAR, MONTH, TREAS_YESTERDAY.replace(".csv", ".xlsx"))
+                print(PATH_TO_DIR)
+                excel = win32.gencache.EnsureDispatch('Excel.Application')
+                wb =  openWorkbook(excel, PATH_TO_DIR)
+                ws = wb.Worksheets('Sheet1') 
+                excel.Visible = True
+
+            except Exception as e:
+                print(e)
+
+            finally:
+                # RELEASES RESOURCES
+                ws = None
+                wb = None
+                excel = None
+
+
+    def OpenFileWASH(self, event):
+    
+        
+        dlg = wx.MessageDialog(self, "Open Report",
+                       style=wx.DD_DEFAULT_STYLE)
+            
+            
+        if dlg.ShowModal() == wx.ID_OK:
+            try:
+                PATH_TO_DIR = os.path.join(BLOOMBERG_REPORT_PATH['main'], 'wash', WASH_LATEST)
+                print(PATH_TO_DIR)
+                excel = win32.gencache.EnsureDispatch('Excel.Application')
+                wb =  openWorkbook(excel, PATH_TO_DIR)
+                ws = wb.Worksheets('Sheet1') 
+                excel.Visible = True
+
+            except Exception as e:
+                print(e)
+
+            finally:
+                # RELEASES RESOURCES
+                ws = None
+                wb = None
+                excel = None
+
 
 
 
