@@ -1,6 +1,8 @@
 import wx
 from bnyCompliance.bestex.mtg.manager import DataMgr
 from bnyCompliance.bestex.treasury.treasMgr import treasMgr 
+from bnyCompliance.FixedIncomeWash.wash import washMgr
+from bnyCompliance.bloombergBooks.books import books
 #from mtgMgr import dataMgr
 #from treasMgr import treasMgr
 #from bloombergBooks import books as books
@@ -66,7 +68,7 @@ class TabOneManual(wx.Panel):
         helpButton = wx.Button(self, label='Help')
 
         runButton = wx.Button(self, label="Run")
-        #runButton.Bind(wx.EVT_BUTTON, self.onOk)
+        runButton.Bind(wx.EVT_BUTTON, self.onOk)
         
         sizer = wx.GridBagSizer(7, 5)
         sizer.Add(instructionText, pos=(0,0), flag=wx.LEFT)
