@@ -4,6 +4,7 @@ import wx.lib.agw.multidirdialog as MDD
 from TabOne import FixedIncomeTabMain
 from TabTwo import EquityTabMain
 from TabThree import TkgTabMain
+from bnyCompliance.ReportOpener.OpenFile import OPEN_MORT, OPEN_TSY
 #from TabFour import ReportGrid
 
 
@@ -63,6 +64,8 @@ class MainFrame(wx.Frame):
             e.Veto()
  
 if __name__ == "__main__":
+    OPEN_MORT
+    OPEN_TSY
     app = wx.App()
     MainFrame().Show()
     app.MainLoop()
