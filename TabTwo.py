@@ -1,4 +1,7 @@
 import wx
+import glob
+from bnyCompliance.equity.lowPriceSec import executedOrderReport, combineFiles
+import os
 
 class LowPriceSec(wx.Panel):
     def __init__(self, parent):
@@ -13,7 +16,7 @@ class LowPriceSec(wx.Panel):
         self.advThreshold = wx.TextCtrl(self, value="0")
         self.advThresholdText = wx.StaticText(self, label="Enter a percent of adv threshold")
         
-        #lowPriceButton.Bind(wx.EVT_BUTTON, self.lowPrice)
+        lowPriceButton.Bind(wx.EVT_BUTTON, self.LowPrice)
         
         
         sizer = wx.GridBagSizer(1, 4)
@@ -25,10 +28,36 @@ class LowPriceSec(wx.Panel):
         sizer.Add(lowPriceButton, pos=(2, 5), flag=wx.TOP|wx.RIGHT, border=5)# file input button sizer
         self.SetSizer(sizer)
         
-class EquityTabMain(wx.Panel):
-    """"""
+    
+    def LowPrice(self, event):
+        
 
-    #----------------------------------------------------------------------
+        save = "H://Post June 11, 2010//Equity Low Priced Report//" #the directory where the final output is saved
+
+        os.chdir('T://CMI//MUNI//FidessaComplianceReportingBKCM') 
+        all_subdirs = [d for d in os.listdir('.') if os.path.isdir(d)]
+
+        latest_subdir = max(all_subdirs, key=os.path.getmtime)
+        reportdir = os.chdir('./'+latest_subdir)
+        reportdir = os.getcwd()
+        orderReports = glob.glob(reportdir + "\\EXECUTED_ORDER*")
+        
+        adv = self.advThreshold.GetValue()
+        price = self.priceThreshold.GetValue()
+        
+        try:
+            rpt = executedOrderReport(orderReports[0], save, int(price), int(adv))
+            rpt.save()
+        except Exception as e:
+            
+            print(e)
+        finally:
+            rpt = executedOrderReport(orderReports[-1], save,int(price), int(adv))
+            rpt.save()
+
+
+class EquityTabMain(wx.Panel):
+
     def __init__(self, parent):
         """Constructor"""
         wx.Panel.__init__(self, parent, style=wx.SUNKEN_BORDER)
