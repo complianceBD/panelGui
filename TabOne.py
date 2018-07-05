@@ -3,9 +3,9 @@ from bnyCompliance.bestex.mtg.manager import DataMgr
 from bnyCompliance.bestex.treasury.treasMgr import treasMgr 
 from bnyCompliance.FixedIncomeWash.wash import washMgr
 from bnyCompliance.bloombergBooks.books import books
-#from bnyCompliance.ReportOpener.excelcomm import openWorkBook
 import win32com.client as win32
 from bnyCompliance.ReportOpener.excelcomm import openWorkbook
+from bnyCompliance.Functions.OpenFile import OpenFileExcel
 
 
 import datetime
@@ -41,26 +41,26 @@ class TabOneManual(wx.Panel):
         
         
         #---------------------------------------------------------
-        instructionText =  wx.StaticText(self, label="Use When Running the Report For Missed Days")
-        font = wx.Font(12, wx.DEFAULT, wx.NORMAL, wx.BOLD)
-        instructionText.SetFont(font)
+        self.instructionText =  wx.StaticText(self, label="Use When Running the Report For Missed Days")
+        self.font = wx.Font(12, wx.DEFAULT, wx.NORMAL, wx.BOLD)
+        self.instructionText.SetFont(self.font)
         #--------------------Date input---------------------------
-        dateText = wx.StaticText(self, label="Date use YYYY-MM-DD Format:   ")
+        self.dateText = wx.StaticText(self, label="Date use YYYY-MM-DD Format:   ")
         self.tc1 = wx.TextCtrl(self)
         #--------------------end date input ----------------------
         
         #---------------------File Input Browser-------------------------------
         #File Lcoation 
-        fileLocText = wx.StaticText(self, label="File Location")
+        self.fileLocText = wx.StaticText(self, label="File Location")
         self.tc2 = wx.TextCtrl(self, value='H:\\Post June 11, 2010\\Calendars\\CM Fixed Income Reviews\\Best Ex Mortgage\\BloombergFiles')
-        inputButton = wx.Button(self, label="Browse...")
-        inputButton.Bind(wx.EVT_BUTTON, self.onDir)
+        self.inputButton = wx.Button(self, label="Browse...")
+        self.inputButton.Bind(wx.EVT_BUTTON, self.onDir)
         #---------------------File Output-------------------------------
-        SaveLocText = wx.StaticText(self, label="Save Location")
+        self.SaveLocText = wx.StaticText(self, label="Save Location")
         self.tc3 = wx.TextCtrl(self, value='H:\\Post June 11, 2010\\Calendars\\CM Fixed Income Reviews')
 
-        outputButton = wx.Button(self, label="Browse...")
-        outputButton.Bind(wx.EVT_BUTTON, self.onDirSave)
+        self.outputButton = wx.Button(self, label="Browse...")
+        self.outputButton.Bind(wx.EVT_BUTTON, self.onDirSave)
         
         #--------------------Radio Buttons x3----------------------------
         
@@ -69,26 +69,26 @@ class TabOneManual(wx.Panel):
         self.radio3 = wx.RadioButton(self, label = 'Wash Sale Report Bloomberg')
         
         #------------------help and run ----------------------------------
-        helpButton = wx.Button(self, label='Help')
+        self.helpButton = wx.Button(self, label='Help')
 
-        runButton = wx.Button(self, label="Run")
-        runButton.Bind(wx.EVT_BUTTON, self.onOk)
+        self.runButton = wx.Button(self, label="Run")
+        self.runButton.Bind(wx.EVT_BUTTON, self.onOk)
         
         sizer = wx.GridBagSizer(7, 5)
-        sizer.Add(instructionText, pos=(0,0), flag=wx.LEFT)
-        sizer.Add(dateText, pos=(2, 0), flag=wx.LEFT, border=10) #Date static text nested on left
+        sizer.Add(self.instructionText, pos=(0,0), flag=wx.LEFT)
+        sizer.Add(self.dateText, pos=(2, 0), flag=wx.LEFT, border=10) #Date static text nested on left
         sizer.Add(self.tc1, pos=(2, 1), span=(1, 3), flag=wx.TOP|wx.EXPAND)#text box for entering date next to static text
-        sizer.Add(fileLocText, pos=(3, 0), flag=wx.LEFT|wx.TOP, border=10)#file input sizer static text
+        sizer.Add(self.fileLocText, pos=(3, 0), flag=wx.LEFT|wx.TOP, border=10)#file input sizer static text
         sizer.Add(self.tc2, pos=(3, 1), span=(1, 3), flag=wx.TOP|wx.EXPAND, border=5)#tc2 input text box
-        sizer.Add(inputButton, pos=(3, 4), flag=wx.TOP|wx.RIGHT, border=5)# file input button sizer
+        sizer.Add(self.inputButton, pos=(3, 4), flag=wx.TOP|wx.RIGHT, border=5)# file input button sizer
         sizer.Add(self.tc3, pos=(4, 1), span=(1, 3),flag=wx.TOP|wx.EXPAND, border=5)
-        sizer.Add(SaveLocText, pos=(4, 0), flag=wx.TOP|wx.LEFT, border=10)
-        sizer.Add(outputButton, pos=(4, 4), flag=wx.TOP|wx.RIGHT, border=5)#brow button save
+        sizer.Add(self.SaveLocText, pos=(4, 0), flag=wx.TOP|wx.LEFT, border=10)
+        sizer.Add(self.outputButton, pos=(4, 4), flag=wx.TOP|wx.RIGHT, border=5)#brow button save
         sizer.Add(self.radio1, pos=(6,1))#radio Mortgage bestex
         sizer.Add(self.radio2, pos=(6,2))#mtg best ex button
         sizer.Add(self.radio3, pos=(6,3))
-        sizer.Add(helpButton, pos=(7, 0), flag=wx.LEFT, border=10)#help button
-        sizer.Add(runButton, pos=(7, 3))
+        sizer.Add(self.helpButton, pos=(7, 0), flag=wx.LEFT, border=10)#help button
+        sizer.Add(self.runButton, pos=(7, 3))
 
 
         self.SetSizer(sizer)
@@ -177,40 +177,46 @@ class TabOneExcelOpen(wx.Panel):
         
         
         #---------------------------------------------------------
-        instructionText =  wx.StaticText(self, label="OPEN REPORTS IN EXCEL")
-        font = wx.Font(12, wx.DEFAULT, wx.NORMAL, wx.BOLD)
-        instructionText.SetFont(font)
+        self.instructionText =  wx.StaticText(self, label="OPEN REPORTS IN EXCEL")
+        self.font = wx.Font(12, wx.DEFAULT, wx.NORMAL, wx.BOLD)
+        self.instructionText.SetFont(self.font)
         #--------------------MTG Best Ex Open Button---------------------------
      
         #File Lcoation 
-        MortgageBestExText = wx.StaticText(self, label="Open Mortgage Best Ex in Excel (must run the report first): ")
-        MtgBestExButton = wx.Button(self, label="Open Mortgage Best Ex in Excel")
-        MtgBestExButton.Bind(wx.EVT_BUTTON, self.OpenFileMTG)
+        self.MortgageBestExText = wx.StaticText(self, label="Open Mortgage Best Ex in Excel (must run the report first): ")
+        self.MtgBestExButton = wx.Button(self, label="Open Mortgage Best Ex in Excel")
+        self.MtgBestExButton.Bind(wx.EVT_BUTTON, self.OpenFileMTG)
+        
+        self.MtgBestExManual = wx.Button(self, label="Chose MTG File To Open")
+        self.MtgDefaultPath =  os.path.join(BLOOMBERG_REPORT_PATH['main'],'Best Ex Mortgage')
+        #OpenFileExcel(path)
+        self.MtgBestExManual.Bind(wx.EVT_BUTTON, self.ManualOpenMTG)
         
         #-------------------Treasury Best Ex Open Button-------------------------
         
-        TreasuryBestExText = wx.StaticText(self, label="Open Treasury Best Ex in Excel (must run the report first): ")
-        TreasuryBestExButton = wx.Button(self, label="Open Treasury Best Ex in Excel")
-        TreasuryBestExButton.Bind(wx.EVT_BUTTON, self.OpenFileTSY)
+        self.TreasuryBestExText = wx.StaticText(self, label="Open Treasury Best Ex in Excel (must run the report first): ")
+        self.TreasuryBestExButton = wx.Button(self, label="Open Treasury Best Ex in Excel")
+        self.TreasuryBestExButton.Bind(wx.EVT_BUTTON, self.OpenFileTSY)
         
         #-------------------Wash Open Button-------------------------
         
-        WashButtonText = wx.StaticText(self, label="Open Wash Report in Excel (must run the report first): ")
-        WashButton = wx.Button(self, label="Open Wash Report in Excel")
-        WashButton.Bind(wx.EVT_BUTTON, self.OpenFileWASH)
+        self.WashButtonText = wx.StaticText(self, label="Open Wash Report in Excel (must run the report first): ")
+        self.WashButton = wx.Button(self, label="Open Wash Report in Excel")
+        self.WashButton.Bind(wx.EVT_BUTTON, self.OpenFileWASH)
        
         
         sizer = wx.GridBagSizer(7, 5)
-        sizer.Add(instructionText, pos=(0,0), flag=wx.LEFT)
+        sizer.Add(self.instructionText, pos=(0,0), flag=wx.LEFT)
         
-        sizer.Add(MortgageBestExText, pos=(2, 0), flag=wx.LEFT, border=10) #Date static text nested on left
-        sizer.Add(MtgBestExButton, pos=(2, 1), span=(1, 3), flag=wx.TOP|wx.EXPAND)#mtgBestEx Button
+        sizer.Add(self.MortgageBestExText, pos=(2, 0), flag=wx.LEFT, border=10) #Date static text nested on left
+        sizer.Add(self.MtgBestExButton, pos=(2, 1), span=(1, 3), flag=wx.TOP|wx.EXPAND)#mtgBestEx Button
+        sizer.Add(self.MtgBestExManual, pos=(2,4), flag=wx.RIGHT)
         
-        sizer.Add(TreasuryBestExText, pos=(3, 0), flag=wx.LEFT|wx.TOP, border=10)#file input sizer static text
-        sizer.Add(TreasuryBestExButton, pos=(3, 1), span=(1, 3), flag=wx.TOP|wx.EXPAND, border=5)#Treasury best ex button
+        sizer.Add(self.TreasuryBestExText, pos=(3, 0), flag=wx.LEFT|wx.TOP, border=10)#file input sizer static text
+        sizer.Add(self.TreasuryBestExButton, pos=(3, 1), span=(1, 3), flag=wx.TOP|wx.EXPAND, border=5)#Treasury best ex button
 
-        sizer.Add(WashButtonText, pos=(4, 0), flag=wx.TOP|wx.LEFT, border=10)
-        sizer.Add(WashButton, pos=(4, 1), span=(1,3), flag=wx.TOP|wx.EXPAND, border=5)#brow button save
+        sizer.Add(self.WashButtonText, pos=(4, 0), flag=wx.TOP|wx.LEFT, border=10)
+        sizer.Add(self.WashButton, pos=(4, 1), span=(1,3), flag=wx.TOP|wx.EXPAND, border=5)#brow button save
 
         self.SetSizer(sizer)
         
@@ -226,7 +232,7 @@ class TabOneExcelOpen(wx.Panel):
             try:
                 PATH_TO_DIR = os.path.join(BLOOMBERG_REPORT_PATH['main'],'Best Ex Mortgage', YEAR, MONTH, MTG_YESTERDAY.replace(".csv", ".xlsx"))
                 print(PATH_TO_DIR)
-                excel = excel = win32.gencache.EnsureDispatch('Excel.Application')
+                excel = win32.gencache.EnsureDispatch('Excel.Application')
                 #openWorkbook(excel, "H:\\Post June 11, 2010\\Calendars\\CM Fixed Income Reviews\\Best Ex Mortgage\\2018"+"\\June\\"+"2018-06-29.xlsx")
                 wb =  openWorkbook(excel, PATH_TO_DIR)
                 ws = wb.Worksheets('Sheet1') 
@@ -240,6 +246,14 @@ class TabOneExcelOpen(wx.Panel):
                 ws = None
                 wb = None
                 excel = None
+    
+    def ManualOpenMTG(self, event):
+        
+        filePath = os.path.join(BLOOMBERG_REPORT_PATH['main'])
+        return OpenFileExcel(self, directory=filePath)
+        
+        
+        
 
     def OpenFileTSY(self, event):
     

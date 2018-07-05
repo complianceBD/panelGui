@@ -4,7 +4,7 @@ from bnyCompliance.equity.lowPriceSec import executedOrderReport, combineFiles
 import os
 import win32com.client as win32
 from bnyCompliance.ReportOpener.excelcomm import openWorkbook
-
+from bnyCompliance.Functions.OpenFile import OpenFileExcel
 
 
 
@@ -75,16 +75,20 @@ class TabTwoExcelOpen(wx.Panel):
         #--------------------MTG Best Ex Open Button---------------------------
      
         #File Lcoation 
-        LowPricedSecText = wx.StaticText(self, label="Open Most recent 'Equity Low Priced Security Report' (must run the report first): ")
-        LowPriceSecOpenButton = wx.Button(self, label="Open Low Priced Security Report")
+        LowPricedSecText = wx.StaticText(self, label="Open 'Equity Low Priced Security Report': ")
+        LowPriceSecOpenButton = wx.Button(self, label="Open Most Recent Priced Security Report")
         LowPriceSecOpenButton.Bind(wx.EVT_BUTTON, self.OpenFileLowPriceReport)
+        
+        self.LowPriceSecDirButton = wx.Button(self, label="Manually Chose Report To Open")
+        self.LowPriceSecDirButton.Bind(wx.EVT_BUTTON, self.OpenFileLowPriceCustom)
        
         #--------------------Sizer----------------------------------------------
-        sizer = wx.GridBagSizer(7, 5)
+        sizer = wx.GridBagSizer(7, 10)
         sizer.Add(instructionText, pos=(0,0), flag=wx.LEFT)
         
-        sizer.Add(LowPricedSecText, pos=(2, 0), flag=wx.LEFT, border=10) #Date static text nested on left
-        sizer.Add(LowPriceSecOpenButton, pos=(2, 1), span=(1, 3), flag=wx.TOP|wx.EXPAND)#mtgBestEx Button
+        sizer.Add(LowPricedSecText, pos=(2, 0), flag=wx.LEFT, border=10) #open report text 
+        sizer.Add(LowPriceSecOpenButton, pos=(2, 1), span=(1, 3), flag=wx.TOP|wx.EXPAND)#Open report for previous bday button
+        sizer.Add(self.LowPriceSecDirButton, pos=(2,4), span=(2,5), flag=wx.RIGHT)
         self.SetSizer(sizer)
         
         
@@ -117,6 +121,41 @@ class TabTwoExcelOpen(wx.Panel):
                 ws = None
                 wb = None
                 excel = None
+                
+    
+    def OpenFileLowPriceCustom(self, event):
+    
+        path=ReportDirs['LowPriceReportDir']
+        OpenFileExcel(self,path)
+        
+        
+        
+    """
+    def OpenFileLowPriceCustom(self, event):
+             #  allows user to select the directory
+        
+        with wx.FileDialog(self, "Open report file", wildcard="excel files (*.xlsx)|*.xlsx|(*.xls)|*.xlsx|(*.csv)|*.csv",
+                       style=wx.FD_OPEN | wx.FD_FILE_MUST_EXIST) as fileDialog:
+            
+            if fileDialog.ShowModal() == wx.ID_CANCEL:
+                return 
+            fileDialog.SetDirectory(ReportDirs['LowPriceReportDir'])
+            pathname = fileDialog.GetPath()
+            
+            try:
+                excel = win32.gencache.EnsureDispatch('Excel.Application')
+                wb =  openWorkbook(excel, pathname)
+                ws = wb.Worksheets('Sheet1') 
+                excel.Visible = True
+            except Exception as e:
+                print(e)
+
+            finally:
+                # RELEASES RESOURCES
+                ws = None
+                wb = None
+                excel = None
+        """
 
 
 
@@ -133,3 +172,10 @@ class EquityTabMain(wx.Panel):
         sizer.Add(panel, pos=(2,1))
         sizer.Add(panel2, pos=(4,1))
         self.SetSizer(sizer)
+        
+        
+def main():
+    pass
+
+if __name__ == "__main__":
+    main()
