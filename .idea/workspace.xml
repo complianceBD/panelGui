@@ -1,0 +1,788 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$USER_HOME$/miniconda3/envs/testenv1/Lib/site-packages/bnyCompliance/equity/lowPriceSecLookBack.py" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="8118996f-8780-4d10-9187-e9edffe356f1" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/compmgr_new.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/compliance-manager.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/icon.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/icon_cgf_icon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/Untitled-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TabOne.py" beforeDir="false" afterPath="$PROJECT_DIR$/TabOne.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TabTwo.py" beforeDir="false" afterPath="$PROJECT_DIR$/TabTwo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/lib/win32com/axscript/Demos/client/wsh/blank.pys" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/comp_mgr.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/comp_mgrTest.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/const/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/TabThree.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/const/functions.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/older/browserview.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/older/comp_mgr.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/older/grid.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/older/lowPriceSec.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/older/mtgMgr.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/older/panels.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/older/panels2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/older/test.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/older/treasMgr.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/older/wash.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/older/xlsGridDemo.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/workingon/.ipynb_checkpoints/Untitled-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/workingon/.ipynb_checkpoints/fileOpener-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/workingon/Untitled.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/workingon/common.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/workingon/custom/FixedIncomeWash/wash.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/workingon/custom/ReportOpener/OpenFile.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/workingon/custom/ReportOpener/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/logger.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/workingon/custom/ReportOpener/excelcomm.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/workingon/custom/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/workingon/custom/bestex/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/workingon/custom/bestex/mtg/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/workingon/custom/bestex/mtg/manager.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/workingon/custom/bestex/treasury/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/workingon/custom/bestex/treasury/treasMgr.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/workingon/custom/bloombergBooks/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/workingon/custom/bloombergBooks/books.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/workingon/custom/equity/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/workingon/custom/equity/lowPriceSec.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/workingon/demo.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/workingon/excelcomm.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/workingon/fileOpener.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/workingon/grids.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/workingon/testxls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/workingon/xlsGrid.py" beforeDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <splitter split-orientation="horizontal" split-proportion="0.5">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="lowPriceSec.py" pinned="false" current-in-tab="false">
+            <entry file="file://$USER_HOME$/miniconda3/envs/testenv1/Lib/site-packages/bnyCompliance/equity/lowPriceSec.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="374">
+                  <caret line="22" column="8" lean-forward="true" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
+                  <folding>
+                    <element signature="e#0#19#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="lowPriceSecLookBack.py" pinned="false" current-in-tab="true">
+            <entry file="file://$USER_HOME$/miniconda3/envs/testenv1/Lib/site-packages/bnyCompliance/equity/lowPriceSecLookBack.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="595">
+                  <caret line="86" column="64" selection-start-line="86" selection-start-column="64" selection-end-line="86" selection-end-column="64" />
+                  <folding>
+                    <element signature="e#0#19#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="manager.py" pinned="false" current-in-tab="false">
+            <entry file="file://$USER_HOME$/miniconda3/envs/testenv1/Lib/site-packages/bnyCompliance/bestex/mtg/manager.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1111">
+                  <caret line="74" column="35" selection-start-line="74" selection-start-column="35" selection-end-line="74" selection-end-column="35" />
+                  <folding>
+                    <element signature="e#28#47#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="TabOne.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/TabOne.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="238">
+                  <caret line="203" column="35" selection-start-line="203" selection-start-column="35" selection-end-line="203" selection-end-column="35" />
+                  <folding>
+                    <element signature="e#0#9#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="setup.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/setup.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="567">
+                  <caret line="34" column="29" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
+                  <folding>
+                    <element signature="e#0#39#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="compliance-manager.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/compliance-manager.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="357">
+                  <caret line="29" column="36" selection-start-line="29" selection-start-column="36" selection-end-line="29" selection-end-column="36" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="TabTwo.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/TabTwo.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="442">
+                  <caret line="153" lean-forward="true" selection-start-line="153" selection-end-line="153" />
+                  <folding>
+                    <element signature="e#0#9#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="wash.py" pinned="false" current-in-tab="false">
+            <entry file="file://$USER_HOME$/miniconda3/envs/testenv1/Lib/site-packages/bnyCompliance/FixedIncomeWash/wash.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="391">
+                  <caret line="23" column="2" lean-forward="true" selection-start-line="23" selection-start-column="2" selection-end-line="23" selection-end-column="2" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>equity low priced report</find>
+      <find>&quot;</find>
+      <find>openWork</find>
+      <find>cons</find>
+      <find>PATH</find>
+      <find>2, 3</find>
+      <find>3</find>
+      <find>show_</find>
+      <find>month_range</find>
+      <find>glob</find>
+      <find>print</find>
+      <find>created</find>
+      <find>getdate</find>
+      <find>date</find>
+      <find>c</find>
+      <find>dt</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$USER_HOME$/miniconda3/envs/compapp/Lib/site-packages/bnyCompliance/equity/lowPriceSec.py" />
+        <option value="$PROJECT_DIR$/compmanager/Lib/site-packages/bnyCompliance/equity/lowPriceSec.py" />
+        <option value="$PROJECT_DIR$/compmanager/Lib/site-packages/bnyCompliance/ReportOpener/excelcomm.py" />
+        <option value="$PROJECT_DIR$/compmanager/Lib/site-packages/bnyCompliance/Functions/OpenFile.py" />
+        <option value="$PROJECT_DIR$/TabThree.py" />
+        <option value="$PROJECT_DIR$/comp_mgr.py" />
+        <option value="$PROJECT_DIR$/workingon/pyBrowser.py" />
+        <option value="$USER_HOME$/miniconda3/envs/compapp/Lib/site-packages/bnyCompliance/ReportOpener/OpenFile.py" />
+        <option value="$USER_HOME$/miniconda3/envs/testenv1/Lib/site-packages/bnyCompliance/bestex/treasury/treasMgr.py" />
+        <option value="$USER_HOME$/miniconda3/envs/testenv1/Lib/site-packages/bnyCompliance/bloombergBooks/books.py" />
+        <option value="$USER_HOME$/miniconda3/envs/testenv1/Lib/site-packages/bnyCompliance/Functions/OpenFile.py" />
+        <option value="$USER_HOME$/miniconda3/envs/testenv1/Lib/site-packages/bnyCompliance/ReportOpener/excelcomm.py" />
+        <option value="$USER_HOME$/miniconda3/envs/testenv1/Lib/site-packages/file_functions/FileCreateTime.py" />
+        <option value="$USER_HOME$/miniconda3/envs/testenv1/Lib/site-packages/bnyCompliance/ReportOpener/OpenFile.py" />
+        <option value="$PROJECT_DIR$/build/wxterm/examples/t1.py" />
+        <option value="$USER_HOME$/miniconda3/envs/testenv1/Lib/site-packages/wxterm/terminal.py" />
+        <option value="$PROJECT_DIR$/build/logger.py" />
+        <option value="$PROJECT_DIR$/logger.py" />
+        <option value="$USER_HOME$/miniconda3/envs/testenv1/Lib/site-packages/bnyCompliance/equity/lowPriceSec.py" />
+        <option value="$PROJECT_DIR$/build/calendar.py" />
+        <option value="$USER_HOME$/miniconda3/envs/testenv1/Lib/site-packages/bnyCompliance/bestex/mtg/manager.py" />
+        <option value="$PROJECT_DIR$/compliance-manager.py" />
+        <option value="$PROJECT_DIR$/setup.py" />
+        <option value="$PROJECT_DIR$/TabOne.py" />
+        <option value="$USER_HOME$/miniconda3/envs/testenv1/Lib/site-packages/bnyCompliance/FixedIncomeWash/wash.py" />
+        <option value="$USER_HOME$/miniconda3/envs/testenv1/Lib/site-packages/bnyCompliance/FixedIncomeWash/wash-test.py" />
+        <option value="$USER_HOME$/miniconda3/envs/testenv1/Lib/site-packages/bnyCompliance/FixedIncomeWash/LowPriceLookBack.py" />
+        <option value="$PROJECT_DIR$/TabTwo.py" />
+        <option value="$USER_HOME$/miniconda3/envs/testenv1/Lib/site-packages/bnyCompliance/equity/lowPriceSecLookBack.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1870" />
+    <option name="y" value="-21" />
+    <option name="width" value="1920" />
+    <option name="height" value="1156" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="compmgr_new" type="b2602c69:ProjectViewProjectNode" />
+              <item name="compmgr_new" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="compmgr_new" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+            <path>
+              <item name="compmgr_new" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Python 3.6 (compmgr_new) (3) &gt;" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="compmgr_new" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Python 3.6 (compmgr_new) (3) &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="testenv1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="compmgr_new" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Python 3.6 (compmgr_new) (3) &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="testenv1" type="462c0819:PsiDirectoryNode" />
+              <item name="Lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="compmgr_new" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Python 3.6 (compmgr_new) (3) &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="testenv1" type="462c0819:PsiDirectoryNode" />
+              <item name="Lib" type="462c0819:PsiDirectoryNode" />
+              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="compmgr_new" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Python 3.6 (compmgr_new) (3) &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="testenv1" type="462c0819:PsiDirectoryNode" />
+              <item name="Lib" type="462c0819:PsiDirectoryNode" />
+              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
+              <item name="bnyCompliance" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="compmgr_new" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Python 3.6 (compmgr_new) (3) &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="testenv1" type="462c0819:PsiDirectoryNode" />
+              <item name="Lib" type="462c0819:PsiDirectoryNode" />
+              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
+              <item name="bnyCompliance" type="462c0819:PsiDirectoryNode" />
+              <item name="equity" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="compmgr_new" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Python 3.6 (compmgr_new) (3) &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="testenv1" type="462c0819:PsiDirectoryNode" />
+              <item name="Lib" type="462c0819:PsiDirectoryNode" />
+              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
+              <item name="bnyCompliance" type="462c0819:PsiDirectoryNode" />
+              <item name="FixedIncomeWash" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="compmgr_new" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Python 3.6 (compmgr_new) (3) &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="Lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="compmgr_new" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Python 3.6 (compmgr_new) (3) &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="Lib" type="462c0819:PsiDirectoryNode" />
+              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="compmgr_new" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Python 3.6 (compmgr_new) (3) &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="Lib" type="462c0819:PsiDirectoryNode" />
+              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
+              <item name="bnyCompliance" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="compmgr_new" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Python 3.6 (compmgr_new) (3) &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="Lib" type="462c0819:PsiDirectoryNode" />
+              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
+              <item name="bnyCompliance" type="462c0819:PsiDirectoryNode" />
+              <item name="equity" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="compmgr_new" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Python 3.6 (compmgr_new) (3) &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="Lib" type="462c0819:PsiDirectoryNode" />
+              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
+              <item name="bnyCompliance" type="462c0819:PsiDirectoryNode" />
+              <item name="FixedIncomeWash" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="compmgr_new" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Python 3.6 (compmgr_new) (3) &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="compmgr_new" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Python 3.6 (compmgr_new) (3) &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
+              <item name="bnyCompliance" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="compmgr_new" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Python 3.6 (compmgr_new) (3) &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
+              <item name="bnyCompliance" type="462c0819:PsiDirectoryNode" />
+              <item name="bestex" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="compmgr_new" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Python 3.6 (compmgr_new) (3) &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
+              <item name="bnyCompliance" type="462c0819:PsiDirectoryNode" />
+              <item name="bestex" type="462c0819:PsiDirectoryNode" />
+              <item name="mtg" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="compmgr_new" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Python 3.6 (compmgr_new) (3) &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
+              <item name="bnyCompliance" type="462c0819:PsiDirectoryNode" />
+              <item name="FixedIncomeWash" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\XBBNQVM\Desktop\compmgr_new\build" />
+      <recent name="C:\Users\XBBNQVM\Desktop\compmgr_new" />
+      <recent name="C:\Users\XBBNQVM\Desktop\compmgr_new\build\wxterm" />
+      <recent name="C:\Users\XBBNQVM\Desktop\compmgr_new\build\wxterm\examples" />
+      <recent name="C:\Users\XBBNQVM\Desktop\compmgr_new\build\reports" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\XBBNQVM\miniconda3\envs\testenv1\Lib\site-packages\bnyCompliance\equity" />
+      <recent name="C:\Users\XBBNQVM\miniconda3\envs\testenv1\Lib\site-packages\bnyCompliance\FixedIncomeWash" />
+      <recent name="C:\Users\XBBNQVM\Desktop\compmgr_new" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="compliance-manager" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="compmgr_new" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/compliance-manager.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.compliance-manager" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8118996f-8780-4d10-9187-e9edffe356f1" name="Default" comment="" />
+      <created>1531320452718</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1531320452718</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="1912" y="-8" width="1936" height="1216" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1975764" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5036881" side_tool="true" visible="true" weight="0.3197405" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Python Console" order="7" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.4963119" visible="true" weight="0.3197405" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39927405" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
+    </layout>
+    <layout-to-restore>
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19915701" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Python Console" order="7" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39927405" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.3206673" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+    </layout-to-restore>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="2" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/TabTwo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="986">
+          <caret line="65" column="12" selection-start-line="65" selection-start-column="12" selection-end-line="65" selection-end-column="88" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="29" column="17" lean-forward="true" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TabOne.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2669">
+          <caret line="171" column="49" lean-forward="true" selection-start-line="171" selection-start-column="49" selection-end-line="171" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/miniconda3/envs/compapp/Lib/site-packages/bnyCompliance/ReportOpener/OpenFile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="30" column="4" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/miniconda3/envs/compapp/Lib/site-packages/bnyCompliance/equity/lowPriceSec.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="193" column="3" selection-start-line="193" selection-start-column="3" selection-end-line="193" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/compmanager/Lib/site-packages/bnyCompliance/equity/lowPriceSec.py" />
+    <entry file="file://$PROJECT_DIR$/compmanager/Lib/site-packages/bnyCompliance/ReportOpener/OpenFile.py" />
+    <entry file="file://$PROJECT_DIR$/compmanager/Lib/site-packages/bnyCompliance/ReportOpener/excelcomm.py" />
+    <entry file="file://$PROJECT_DIR$/compmanager/Lib/site-packages/bnyCompliance/Functions/OpenFile.py" />
+    <entry file="file://$PROJECT_DIR$/workingon/pyBrowser.py" />
+    <entry file="file://$PROJECT_DIR$/comp_mgr.py" />
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TabThree.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/miniconda3/envs/compapp/Lib/site-packages/bnyCompliance/ReportOpener/OpenFile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="653">
+          <caret line="44" column="9" selection-start-line="44" selection-start-column="9" selection-end-line="44" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/miniconda3/envs/testenv1/Lib/site-packages/bnyCompliance/bestex/treasury/treasMgr.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="179" selection-start-line="179" selection-end-line="179" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/miniconda3/envs/testenv1/Lib/site-packages/bnyCompliance/bloombergBooks/books.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="653">
+          <caret line="40" column="9" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/miniconda3/envs/testenv1/Lib/site-packages/bnyCompliance/Functions/OpenFile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="568">
+          <caret line="58" column="11" lean-forward="true" selection-start-line="58" selection-start-column="11" selection-end-line="58" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/miniconda3/envs/testenv1/Lib/site-packages/bnyCompliance/ReportOpener/excelcomm.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="34" column="9" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/miniconda3/envs/testenv1/Lib/site-packages/file_functions/FileCreateTime.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="568">
+          <caret line="49" column="11" lean-forward="true" selection-start-line="49" selection-start-column="11" selection-end-line="49" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/miniconda3/envs/testenv1/Lib/site-packages/bnyCompliance/ReportOpener/OpenFile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/wxterm/examples/t1.py" />
+    <entry file="file://$USER_HOME$/miniconda3/envs/testenv1/Lib/site-packages/wxterm/terminal.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="11" lean-forward="true" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logger.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="58" column="51" lean-forward="true" selection-start-line="58" selection-start-column="51" selection-end-line="58" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/wxterm/wxterm/colors256.py" />
+    <entry file="file://$PROJECT_DIR$/build/wxterm/wxterm/terminal.py" />
+    <entry file="file://$PROJECT_DIR$/build/wxterm/.gitignore" />
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="22" selection-start-line="13" selection-start-column="12" selection-end-line="14" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/calendar.py" />
+    <entry file="file://$USER_HOME$/miniconda3/envs/testenv1/Lib/site-packages/dateutil/parser/_parser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="42" column="51" selection-start-line="42" selection-start-column="51" selection-end-line="42" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/miniconda3/envs/testenv1/Lib/site-packages/blpapi/request.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="42" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/miniconda3/envs/testenv1/Lib/site-packages/blpapi/internals.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="27" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/miniconda3/envs/testenv1/Lib/site-packages/tia/bbg/bbg_com.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/miniconda3/envs/testenv1/Lib/site-packages/tia/bbg/v3api.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="69" column="15" selection-start-line="69" selection-start-column="10" selection-end-line="69" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/miniconda3/envs/testenv1/Lib/site-packages/bloombergBooks/bloombergBooks.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="66" lean-forward="true" selection-start-line="22" selection-start-column="66" selection-end-line="22" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/miniconda3/envs/testenv1/Lib/site-packages/tia/bbg/example.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/miniconda3/envs/testenv1/Lib/site-packages/tia/bbg/datamgr.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/miniconda3/envs/testenv1/Lib/site-packages/blpapi/element.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3927" />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/miniconda3/envs/testenv1/Lib/site-packages/blpapi/topic.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/miniconda3/envs/testenv1/Lib/site-packages/blpapi/testtools.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2159">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TabTwoTest.py" />
+    <entry file="file://$PROJECT_DIR$/build/logger.py" />
+    <entry file="file://$USER_HOME$/miniconda3/envs/testenv1/Lib/site-packages/bnyCompliance/bestex/mtg/manager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1111">
+          <caret line="74" column="35" selection-start-line="74" selection-start-column="35" selection-end-line="74" selection-end-column="35" />
+          <folding>
+            <element signature="e#28#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/compliance-manager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="29" column="36" selection-start-line="29" selection-start-column="36" selection-end-line="29" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/miniconda3/envs/testenv1/Lib/site-packages/bnyCompliance/FixedIncomeWash/wash.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="2" lean-forward="true" selection-start-line="23" selection-start-column="2" selection-end-line="23" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/miniconda3/envs/testenv1/Lib/site-packages/bnyCompliance/FixedIncomeWash/LowPriceLookBack.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/miniconda3/envs/testenv1/Lib/site-packages/bnyCompliance/FixedIncomeWash/wash-test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="34" column="29" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/miniconda3/envs/testenv1/Lib/site-packages/bnyCompliance/equity/lowPriceSec.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="8" lean-forward="true" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TabOne.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="203" column="35" selection-start-line="203" selection-start-column="35" selection-end-line="203" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TabTwo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="153" lean-forward="true" selection-start-line="153" selection-end-line="153" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/miniconda3/envs/testenv1/Lib/site-packages/bnyCompliance/equity/lowPriceSecLookBack.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="86" column="64" selection-start-line="86" selection-start-column="64" selection-end-line="86" selection-end-column="64" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

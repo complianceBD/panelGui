@@ -1,8 +1,16 @@
-requires tia-bloomberg
-requires python 3.6
-requires pandas
-requires numpy
-requires wxpython
-requires BLPAPI
-Require Bloomberg Terminal
-requires a personal module named bloombergBooks which lists all bloomberg books for wash report, otherwise comment this out and make your own bloomberg books array in the wash.py
+blpapi==3.9.2
+certifi==2018.4.16
+et-xmlfile==1.0.1
+jdcal==1.4
+numpy==1.14.5
+openpyxl==2.5.4
+pandas==0.23.3
+Pypubsub==4.0.0
+python-dateutil==2.7.3
+pytz==2018.5
+pywin32==223
+six==1.11.0
+tia==0.3.0
+wincertstore==0.2
+wxPython==4.0.3
+xlrd==1.1.0
