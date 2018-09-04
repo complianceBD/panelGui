@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8118996f-8780-4d10-9187-e9edffe356f1" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testenv1.7z" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -30,7 +31,7 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="lowPriceSecLookBack.py" pinned="false" current-in-tab="true">
+          <file leaf-file-name="lowPriceSecLookBack.py" pinned="false" current-in-tab="false">
             <entry file="file://$USER_HOME$/miniconda3/envs/testenv1/Lib/site-packages/bnyCompliance/equity/lowPriceSecLookBack.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="595">
@@ -38,6 +39,15 @@
                   <folding>
                     <element signature="e#0#19#0" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/.gitignore">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="68">
+                  <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
                 </state>
               </provider>
             </entry>
@@ -142,6 +152,9 @@
       <find>c</find>
       <find>dt</find>
     </findStrings>
+    <replaceStrings>
+      <replace>df1</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -178,6 +191,7 @@
         <option value="$USER_HOME$/miniconda3/envs/testenv1/Lib/site-packages/bnyCompliance/FixedIncomeWash/LowPriceLookBack.py" />
         <option value="$PROJECT_DIR$/TabTwo.py" />
         <option value="$USER_HOME$/miniconda3/envs/testenv1/Lib/site-packages/bnyCompliance/equity/lowPriceSecLookBack.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -412,15 +426,16 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1920" y="14" width="1920" height="1156" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1992561" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1992561" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50371945" side_tool="true" visible="true" weight="0.33856723" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.49628055" visible="true" weight="0.33856723" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49628055" visible="true" weight="0.33856723" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39927405" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -460,16 +475,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/TabTwo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="986">
-          <caret line="65" column="12" selection-start-line="65" selection-start-column="12" selection-end-line="65" selection-end-column="88" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/setup.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
@@ -727,6 +732,13 @@
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
         </state>
       </provider>
     </entry>
