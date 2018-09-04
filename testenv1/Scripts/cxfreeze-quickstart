@@ -1,0 +1,5 @@
+#!C:\Users\XBBNQVM\miniconda3\envs\testenv1\python.exe
+from cx_Freeze.setupwriter import main
+
+main()
+

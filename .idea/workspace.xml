@@ -5,60 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8118996f-8780-4d10-9187-e9edffe356f1" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compmgr_new.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/compliance-manager.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/icon.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/icon_cgf_icon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/Untitled-checkpoint.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TabOne.py" beforeDir="false" afterPath="$PROJECT_DIR$/TabOne.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TabTwo.py" beforeDir="false" afterPath="$PROJECT_DIR$/TabTwo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/lib/win32com/axscript/Demos/client/wsh/blank.pys" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/comp_mgr.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/comp_mgrTest.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/const/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/TabThree.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/const/functions.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/older/browserview.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/older/comp_mgr.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/older/grid.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/older/lowPriceSec.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/older/mtgMgr.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/older/panels.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/older/panels2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/older/test.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/older/treasMgr.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/older/wash.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/older/xlsGridDemo.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/workingon/.ipynb_checkpoints/Untitled-checkpoint.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/workingon/.ipynb_checkpoints/fileOpener-checkpoint.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/workingon/Untitled.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/workingon/common.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/workingon/custom/FixedIncomeWash/wash.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/workingon/custom/ReportOpener/OpenFile.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/workingon/custom/ReportOpener/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/logger.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/workingon/custom/ReportOpener/excelcomm.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/workingon/custom/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/workingon/custom/bestex/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/workingon/custom/bestex/mtg/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/workingon/custom/bestex/mtg/manager.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/workingon/custom/bestex/treasury/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/workingon/custom/bestex/treasury/treasMgr.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/workingon/custom/bloombergBooks/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/workingon/custom/bloombergBooks/books.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/workingon/custom/equity/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/workingon/custom/equity/lowPriceSec.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/workingon/demo.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/workingon/excelcomm.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/workingon/fileOpener.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/workingon/grids.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/workingon/testxls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/workingon/xlsGrid.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -75,7 +22,7 @@
             <entry file="file://$USER_HOME$/miniconda3/envs/testenv1/Lib/site-packages/bnyCompliance/equity/lowPriceSec.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="374">
-                  <caret line="22" column="8" lean-forward="true" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
+                  <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
                   <folding>
                     <element signature="e#0#19#0" expanded="true" />
                   </folding>
@@ -148,7 +95,7 @@
             <entry file="file://$PROJECT_DIR$/TabTwo.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="442">
-                  <caret line="153" lean-forward="true" selection-start-line="153" selection-end-line="153" />
+                  <caret line="153" selection-start-line="153" selection-end-line="153" />
                   <folding>
                     <element signature="e#0#9#0" expanded="true" />
                   </folding>
@@ -160,7 +107,7 @@
             <entry file="file://$USER_HOME$/miniconda3/envs/testenv1/Lib/site-packages/bnyCompliance/FixedIncomeWash/wash.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="391">
-                  <caret line="23" column="2" lean-forward="true" selection-start-line="23" selection-start-column="2" selection-end-line="23" selection-end-column="2" />
+                  <caret line="23" column="2" selection-start-line="23" selection-start-column="2" selection-end-line="23" selection-end-column="2" />
                 </state>
               </provider>
             </entry>
@@ -234,9 +181,9 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1870" />
-    <option name="y" value="-21" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="1920" />
+    <option name="y" value="14" />
     <option name="width" value="1920" />
     <option name="height" value="1156" />
   </component>
@@ -464,17 +411,16 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1936" height="1216" extended-state="6" />
-    <editor active="true" />
+    <frame x="1920" y="14" width="1920" height="1156" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1975764" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1992561" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5036881" side_tool="true" visible="true" weight="0.3197405" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50371945" side_tool="true" visible="true" weight="0.33856723" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.4963119" visible="true" weight="0.3197405" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.49628055" visible="true" weight="0.33856723" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39927405" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -720,7 +666,7 @@
     <entry file="file://$USER_HOME$/miniconda3/envs/testenv1/Lib/site-packages/bnyCompliance/FixedIncomeWash/wash.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
-          <caret line="23" column="2" lean-forward="true" selection-start-line="23" selection-start-column="2" selection-end-line="23" selection-end-column="2" />
+          <caret line="23" column="2" selection-start-line="23" selection-start-column="2" selection-end-line="23" selection-end-column="2" />
         </state>
       </provider>
     </entry>
@@ -747,7 +693,7 @@
     <entry file="file://$USER_HOME$/miniconda3/envs/testenv1/Lib/site-packages/bnyCompliance/equity/lowPriceSec.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
-          <caret line="22" column="8" lean-forward="true" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
+          <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
@@ -767,7 +713,7 @@
     <entry file="file://$PROJECT_DIR$/TabTwo.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
-          <caret line="153" lean-forward="true" selection-start-line="153" selection-end-line="153" />
+          <caret line="153" selection-start-line="153" selection-end-line="153" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
