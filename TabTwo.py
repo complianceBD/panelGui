@@ -5,7 +5,7 @@ import os
 import win32com.client as win32
 from bnyCompliance.ReportOpener.excelcomm import openWorkbook
 from bnyCompliance.Functions.OpenFile import OpenFileExcel
-from bnyCompliance.equity.lowPriceSecLookBack import lowPriceSecBackDate, FormatSaveBackDate
+from bnyCompliance.equity.lowPriceSecLookBack import lowPriceSecBackDate, FormatSaveBackDate, BackDateCpty
 import pandas as pd
 import datetime
 from tia.bbg import LocalTerminal
@@ -116,45 +116,66 @@ class LowPriceSec(wx.Panel):
 
     def BackDate(self, event):
         i = 0
-        while i < 1:
-            wait = wx.BusyCursor()
-            date = self.dateCtrl.GetValue()
-            print(date)
-            adv = self.advThreshold.GetValue()
-            price = self.priceThreshold.GetValue()
+        try:
+            while i < 1:
+                wait = wx.BusyCursor() #run busy cursor until end
+                date = self.dateCtrl.GetValue() #get the date input from the gui
+                print(date)
+                adv = self.advThreshold.GetValue() #get the adv string value from gui
+                price = self.priceThreshold.GetValue() # get the price threshold from gui
 
-            backdate = lowPriceSecBackDate(date, price, adv)
-            backdate.formatDates()
-            print(backdate.FILE_DIR)
-
-            bkDateReport = executedOrderReport(backdate.FILE_DIR, backdate.SAVE, 3, 10)
-            syms = bkDateReport.getSymbols()
-            syms = syms.SYMBOL.tolist()
-            syms = [i + " US EQUITY" for i in syms]
-            print('sybmols found are: ', syms)
-            print("date is report will run for is: ", backdate.RUN_DATE)
-
-            print('running advs')
-            advs = LocalTerminal.get_historical(syms, 'PX_VOLUME', backdate.RUN_DATE, backdate.RUN_DATE).as_frame()
-            adv2 = LocalTerminal.get_reference_data(syms, 'VOLUME_AVG_30D', backdate.RUN_DATE,
-                                                    backdate.RUN_DATE).as_frame()
-            advs = advs.transpose().reset_index().set_index('level_0').iloc[:, -1:]
-            advs.columns = ['PX_VOLUME_1D']
-            adv2 = adv2.join(advs).reset_index()
-            adv2.columns = ['SYMBOL', 'VOLUME_AVG_30D', 'PX_VOLUME_1D']
-            adv2['SYMBOL'] = [i.split(" ", 1)[0] for i in adv2.SYMBOL.tolist()]
+                backdate = lowPriceSecBackDate(date, price, adv) #craate back date object
+                backdate.formatDates() # get the dates and file dirs
+                print(backdate.FILE_DIR, '\n', backdate.cpty_report,'\n', backdate.cpty_stepout)
+                backDateCptyDf = pd.read_csv(backdate.cpty_report, sep="|")
+                backDateAllocationDf  = pd.read_csv(backdate.cpty_stepout, sep="|")
 
 
-            exceptionFrame = bkDateReport.getSymbols()
-            exceptionFrame = exceptionFrame.merge(adv2, on='SYMBOL', how='left')
-            exceptionFrame['BKCM_TOTAL_VOL'] = exceptionFrame.groupby('SYMBOL')['VOLUME'].transform('sum')
-            exceptionFrame['BKCM_%_ADV'] = (exceptionFrame['BKCM_TOTAL_VOL'] / exceptionFrame['VOLUME_AVG_30D']) * 100
-            exceptionFrame['BKCM_%_OF_VOLUME_YESTERDAY'] = (exceptionFrame['BKCM_TOTAL_VOL'] / exceptionFrame['PX_VOLUME_1D']) * 100
-            exceptionFrame = exceptionFrame[exceptionFrame['BKCM_%_ADV'] > 10]
 
-            exception = FormatSaveBackDate(exceptionFrame, backdate.date2)
+
+                bkDateReport = executedOrderReport(backdate.FILE_DIR, backdate.SAVE, 3, 10) # use the low price sec class to get symbols dont run the regulat low price report
+                syms = bkDateReport.getSymbols()
+                syms = syms.SYMBOL.tolist()
+                syms = [i + " US EQUITY" for i in syms]
+                print('sybmols found are: ', syms)
+                print("date is report will run for is: ", backdate.RUN_DATE)
+
+                print('running advs')
+                advs = LocalTerminal.get_historical(syms, 'PX_VOLUME', backdate.RUN_DATE, backdate.RUN_DATE).as_frame() #uses custom bloomberg api based on TIA_BBG github
+                adv2 = LocalTerminal.get_reference_data(syms, 'VOLUME_AVG_30D', backdate.RUN_DATE,
+                                                        backdate.RUN_DATE).as_frame()
+                advs = advs.transpose().reset_index().set_index('level_0').iloc[:, -1:]
+                advs.columns = ['PX_VOLUME_1D']
+                adv2 = adv2.join(advs).reset_index()
+                adv2.columns = ['SYMBOL', 'VOLUME_AVG_30D', 'PX_VOLUME_1D']
+                adv2['SYMBOL'] = [i.split(" ", 1)[0] for i in adv2.SYMBOL.tolist()]
+
+
+
+                exceptionFrame = bkDateReport.getSymbols()
+                exceptionFrame = exceptionFrame.merge(adv2, on='SYMBOL', how='left')
+                exceptionFrame['BKCM_TOTAL_VOL'] = exceptionFrame.groupby('SYMBOL')['VOLUME'].transform('sum')
+                exceptionFrame['BKCM_%_ADV'] = (exceptionFrame['BKCM_TOTAL_VOL'] / exceptionFrame['VOLUME_AVG_30D']) * 100
+                exceptionFrame['BKCM_%_OF_VOLUME_YESTERDAY'] = (exceptionFrame['BKCM_TOTAL_VOL'] / exceptionFrame['PX_VOLUME_1D']) * 100
+                exceptionFrame = exceptionFrame[exceptionFrame['BKCM_%_ADV'] > 10]
+
+
+                print('running backdate cpty')
+                cpty = BackDateCpty(backDateAllocationDf, backDateCptyDf)
+                cpty.merge()
+                cpty = cpty.alloc
+                exceptionFrame = pd.merge(exceptionFrame, cpty, left_on='PARENT_ORDER_ID', right_on='ORDER_ID', how='left')
+
+                print("excpetion report found these counter parties :", exceptionFrame.COUNTERPARTY_CODE.tolist())
+
+                print('saving')
+                exception = FormatSaveBackDate(exceptionFrame, backdate.date2)
+                i = 2
+                return exception.save()
+        except Exception as e:
+            print(e)
             i = 2
-            return exception.save()
+            return
 
 
 
